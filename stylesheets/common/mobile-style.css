@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+.wrapper {
+  position: relative;
+}
+/* 헤더 */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 50px;
+  font-family: 'Didact Gothic', sans-serif;
+  background-color: #FFF;
+  -webkit-box-shadow: -1px 1px 3px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: -1px 1px 3px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: -1px 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+.logo {
+  text-align: center;
+}
+.logo a {
+  display: inline-block;
+}
+.logo .img-wrap {
+  display: inline-block;
+  width: 30px;
+  vertical-align: middle;
+}
+.logo .img-wrap img {
+  width: 100%;
+}
+.logo .logo-title {
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 22px;
+  line-height: 50px;
+}
+.menu-btn {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%); /* Chrome, Safari, Opera */
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%); /* IE 9 */
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding: 8.5px 10px;
+  font-size: 25px;
+}
+.navigation {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 75%;
+  height: 100%;
+  padding: 150px 25px;
+  background-color: #EAEFF2;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  z-index:-1;
+}
+.navigation.nav-act {
+  left: 0;
+  z-index: 1010;
+  opacity: 1;
+}
+.menu li {
+  padding: 5px 0;
+  font-size: 25px;
+  text-align: right;
+}
+.menu a {
+  position: relative;
+  color: #8E8E8E;
+}
+.menu li.active a {
+  color: #000;
+}
+.menu li.active a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #E06035;
+}
+.menu-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 25px;
+}
+
+.contents-wrap {
+  padding-top: 50px;
+}
+
+.menu-open-bg {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: all .3s ease;
+}
+.menu-open-bg.menu-bg-act {
+  position: fixed;
+  z-index: 1005;
+  opacity: 1;
+}
