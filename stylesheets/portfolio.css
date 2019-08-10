@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 .title-wraper {
-  background-image: url("../images/portfolio/title-bg.jpeg");
+  background-image: url("../images/portfolio/title-bg.jpg");
 }
 .portfolio-wrap {
   padding: 0 15px 100px;
@@ -146,15 +146,6 @@ body.layer-show {
   font-weight: 700;
   font-size: 40px;
   word-break: keep-all;
-}
-.info-producing {
-  color: rgba(24,24,27,.3);
-  font-size: 12px;
-}
-.info-copyright {
-  margin-bottom: 20px;
-  color: rgba(24,24,27,.3);
-  font-size: 12px;
 }
 .info-wrap ul a {
   display: inline-block;
