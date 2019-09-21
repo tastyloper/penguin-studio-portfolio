@@ -1,15 +1,2 @@
 @charset "utf-8";
 
-.title-wraper:before {
-  padding-top: 38%;
-}
-.title-wrap h2 {
-  font-size: 45px;
-}
-.title-wrap p {
-  font-size: 18px;
-}
-.title-bg {
-  width: 260px;
-  height: 260px;
-}

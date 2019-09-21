@@ -7,18 +7,18 @@
   <title>Penguin's Studio</title>
   <link rel="shortcut icon" href="images/common/favicon.ico" type="image/x-icon">
   <link rel="icon" href="images/common/favicon.png" type="image/png">
+  <link rel="stylesheet" href="stylesheets/common/font-awesome-4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="stylesheets/common/style.css">
   <link rel="stylesheet" media="screen and (max-width: 767px)" href="stylesheets/common/mobile-style.css">
   <link rel="stylesheet" media="screen and (min-width: 768px)" href="stylesheets/common/tablet-style.css">
   <link rel="stylesheet" media="screen and (min-width: 992px)" href="stylesheets/common/desktop-style.css">
   <link rel="stylesheet" media="screen and (min-width: 1200px)" href="stylesheets/common/large-desktop-style.css">
-  <link rel="stylesheet" href="stylesheets/portfolio.css">
 </head>
 <body>
   <div class="wrapper">
     <header class="header">
       <h1 class="logo">
-        <a href="/" class="transition">
+        <a href="#home" class="transition">
           <div class="img-wrap">
             <img src="images/common/logo.jpg" alt="penguin's studio" title="팽귄 스튜디오">
           </div>
@@ -30,7 +30,10 @@
         <h2 class="readable-hidden">메인메뉴</h2>
         <ul class="menu">
           <li class="active">
-            <a href="/">portfolio</a>
+            <a href="#home">home</a>
+          </li>
+          <li class="">
+            <a href="#portfolio">portfolio</a>
           </li>
         </ul>
         <a href="javascript:void(0);" class="menu-close-btn icon-cancel"></a>
@@ -39,16 +42,38 @@
     </header>
     <div class="contents-wrap">
       <div class="contents">
-        <section class="title-wraper">
-          <article class="title-head">
-            <div class="title-wrap">
-              <h2>portfolio</h2>
-              <p>penguin's studio</p>
+        <section id="home" class="section-wrap home-wrap">
+          <div class="home-logo-wrap">
+            <img src="images/common/logo.jpg" alt="penguin's studio" title="팽귄 스튜디오">
+            <h3 class="section-title home-title">penguin's studio</h3>
+            <div class="btn-wrap">
+              <a href="#portfolio" class="btn main-btn">portfolio</a>
+              <a href="#" class="btn default-btn">contect</a>
             </div>
-            <div class="title-bg"></div>
-          </article>
+          </div>
+          <a class="scroll-icon" href="#portfolio"><i class="fa fa-angle-double-down"></i></a>
+          <!-- <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides">
+                <li class="glide__slide slide1">
+                  <img src="/images/home/slide1.jpg" alt="">
+                </li>
+                <li class="glide__slide slide2">
+                  <img src="/images/home/slide2.jpg" alt="">
+                </li>
+                <li class="glide__slide slide3">
+                  <img src="/images/home/slide3.jpg" alt="">
+                </li>
+              </ul>
+            </div>
+            <div class="glide__arrows" data-glide-el="controls">
+              <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+              <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+            </div>
+          </div> -->
         </section>
-        <section class="portfolio-wrap">
+        <section id="portfolio" class="section-wrap portfolio-wrap">
+          <h3 class="section-title">portfolio</h3>
           <div class="button-group filters-button-group">
             <!-- Music  /  Concert  /  광고  /  교재[어학] -->
             <span>SHOW BY :</span>
@@ -61,204 +86,205 @@
           <div class="grid">
             <div class="grid-sizer"></div>
             <div class="gutter-sizer"></div>
-            <div class="grid-item ad" data-date="20180829" data-youtube="https://www.youtube.com/watch?v=WhZO0FoatQw">
-              <img src="images/portfolio/1.jpg" alt="[팔도 왕뚜껑] 왕맛드립 with 1인 크리에이터">
+            <div class="grid-item ad" data-id="33" data-date="20180829" data-youtube="https://www.youtube.com/watch?v=WhZO0FoatQw">
+              <img src="images/portfolio/33.jpg" alt="[팔도 왕뚜껑] 왕맛드립 with 1인 크리에이터">
               <div class="subject-bg">
                 <p>[팔도 왕뚜껑] 왕맛드립 with 1인 크리에이터</p>
               </div>
             </div>
-            <div class="grid-item music" data-date="20180518" data-youtube="https://www.youtube.com/watch?v=ULW8nhXhZTU">
-              <img src="images/portfolio/2.jpg" alt="BTS - LOVE YOURSELF 轉 'Tear' 정규 앨범">
+            <div class="grid-item music" data-id="32" data-date="20180518" data-youtube="https://www.youtube.com/watch?v=mpyzyQ9SKQs">
+              <img src="images/portfolio/32.jpg" alt="BTS - LOVE YOURSELF 轉 'tear' 정규 앨범">
               <div class="subject-bg">
-                <p>BTS - LOVE YOURSELF 轉 'Tear' 정규 앨범</p>
+                <p>BTS - LOVE YOURSELF 轉 "Tear" 정규 앨범</p>
               </div>
             </div>
-            <div class="grid-item music" data-date="20180404" data-youtube="https://www.youtube.com/watch?v=SEquGYMci00">
-              <img src="images/portfolio/3.jpg" alt="BTS - FACE YOURSELF 일본 정규 앨범">
+            <div class="grid-item music" data-id="31" data-date="20180404" data-youtube="https://www.youtube.com/watch?v=SEquGYMci00">
+              <img src="images/portfolio/31.jpg" alt="BTS - FACE YOURSELF 일본 정규 앨범">
               <div class="subject-bg">
                 <p>BTS - FACE YOURSELF 일본 정규 앨범</p>
               </div>
             </div>
-            <div class="grid-item music" data-date="20180302" data-youtube="https://www.youtube.com/watch?v=Gt-yOFYSxbs">
-              <img src="images/portfolio/4.jpg" alt="J-hope - HOPEWORLD Mixtape">
+            <div class="grid-item music" data-id="30" data-date="20180302" data-youtube="https://www.youtube.com/watch?v=Gt-yOFYSxbs">
+              <img src="images/portfolio/30.jpg" alt="J-hope - HOPEWORLD Mixtape">
               <div class="subject-bg">
                 <p>J-hope - HOPEWORLD Mixtape</p>
               </div>
             </div>
-            <div class="grid-item music" data-date="20180226" data-youtube="https://www.youtube.com/watch?v=5Lm3KTEtlBM">
-              <img src="images/portfolio/5.jpg" alt="이현 -다음이 있을까 싱글 음원">
+            <div class="grid-item music" data-id="29" data-date="20180226" data-youtube="https://www.youtube.com/watch?v=5Lm3KTEtlBM">
+              <img src="images/portfolio/29.jpg" alt="이현 -다음이 있을까 싱글 음원">
               <div class="subject-bg">
                 <p>이현 -다음이 있을까 싱글 음원</p>
               </div>
             </div>
-            <div class="grid-item concert" data-date="20180113-20180114" data-youtube="">
-              <img src="images/portfolio/6.jpg" alt="BTS 4TH MUSTER">
+            <div class="grid-item concert" data-id="28" data-date="20180113-20180114" data-youtube="">
+              <img src="images/portfolio/28.jpg" alt="BTS 4TH MUSTER">
               <div class="subject-bg">
                 <p>BTS 4TH MUSTER</p>
               </div>
             </div>
-            <div class="grid-item concert" data-date="20180110-20180111" data-youtube="">
-              <img src="images/portfolio/7.jpg" alt="2017 골든디스크">
+            <div class="grid-item concert" data-id="27" data-date="20180110-20180111" data-youtube="">
+              <img src="images/portfolio/27.jpg" alt="2017 골든디스크">
               <div class="subject-bg">
                 <p>2017 골든디스크</p>
               </div>
             </div>
-            <div class="grid-item concert" data-date="20171208-20171210" data-youtube="">
-              <img src="images/portfolio/8.jpg" alt="2017 BTS LIVE WINGS TOUR">
+            <div class="grid-item concert" data-id="26" data-date="20171208-20171210" data-youtube="">
+              <img src="images/portfolio/26.jpg" alt="2017 BTS LIVE WINGS TOUR">
               <div class="subject-bg">
                 <p>2017 BTS LIVE WINGS TOUR</p>
               </div>
             </div>
-            <div class="grid-item concert" data-date="20171202" data-youtube="">
-              <img src="images/portfolio/9.jpg" alt="MMA 2017">
+            <div class="grid-item concert" data-id="25" data-date="20171202" data-youtube="">
+              <img src="images/portfolio/25.jpg" alt="MMA 2017">
               <div class="subject-bg">
                 <p>MMA 2017</p>
               </div>
             </div>
-            <div class="grid-item music" data-date="20171201" data-youtube="https://www.youtube.com/watch?v=n2gpoH373zw">
-              <img src="images/portfolio/10.jpg" alt="이현-입술자국 싱글 음원">
+            <div class="grid-item music" data-id="24" data-date="20171201" data-youtube="https://www.youtube.com/watch?v=n2gpoH373zw">
+              <img src="images/portfolio/24.jpg" alt="이현-입술자국 싱글 음원">
               <div class="subject-bg">
                 <p>이현-입술자국 싱글 음원</p>
               </div>
             </div>
-            <div class="grid-item music" data-date="20170918" data-youtube="https://www.youtube.com/watch?v=ADLYklvLbws">
-              <img src="images/portfolio/11.jpg" alt="BTS - LOVE YOURSELF 承 'Her' 정규 앨범">
+            <div class="grid-item music" data-id="23" data-date="20170918" data-youtube="https://www.youtube.com/watch?v=ADLYklvLbws">
+              <img src="images/portfolio/23.jpg" alt="BTS - LOVE YOURSELF 承 'her' 정규 앨범">
               <div class="subject-bg">
-                <p>BTS - LOVE YOURSELF 承 'Her' 정규 앨범</p>
+                <p>BTS - LOVE YOURSELF 承 "Her" 정규 앨범</p>
               </div>
             </div>
-            <div class="grid-item music" data-date="20170704" data-youtube="https://www.youtube.com/watch?v=Wnz0s-ff8WA">
-              <img src="images/portfolio/12.jpg" alt="BTS - COME BACK HOME 앨범">
+            <div class="grid-item music" data-id="22" data-date="20170704" data-youtube="https://www.youtube.com/watch?v=Wnz0s-ff8WA">
+              <img src="images/portfolio/22.jpg" alt="서태지 - COME BACK HOME 앨범">
               <div class="subject-bg">
-                <p>BTS - COME BACK HOME 앨범</p>
+                <p>서태지 - COME BACK HOME 앨범</p>
               </div>
             </div>
-            <div class="grid-item concert" data-date="20170613" data-youtube="">
-              <img src="images/portfolio/13.jpg" alt="2017 BTS HOME PARTY">
+            <div class="grid-item concert" data-id="21" data-date="20170613" data-youtube="" >
+              <img src="images/portfolio/21.jpg" alt="2017 BTS HOME PARTY">
               <div class="subject-bg">
                 <p>2017 BTS HOME PARTY</p>
               </div>
             </div>
-            <div class="grid-item tvcf" data-date="20161214" data-youtube="https://www.youtube.com/watch?v=JjW65KyA9CQ">
-              <img src="images/portfolio/14.jpg" alt="동국제약 판시딜 카운셀러편">
+            <div class="grid-item tvcf" data-id="20" data-date="20161214" data-youtube="https://www.youtube.com/watch?v=JjW65KyA9CQ">
+              <img src="images/portfolio/20.jpg" alt="동국제약 판시딜 카운셀러편">
               <div class="subject-bg">
                 <p>동국제약 판시딜 카운셀러편</p>
               </div>
             </div>
-            <div class="grid-item tvcf" data-date="20160829" data-youtube="https://www.youtube.com/watch?v=E3BGVL7U4dg">
-              <img src="images/portfolio/15.jpg" alt="르꼬끄 골프 이보미편">
+            <div class="grid-item tvcf" data-id="19" data-date="20160829" data-youtube="https://www.youtube.com/watch?v=E3BGVL7U4dg"
+              style="position: absolute; left: 67.8908%; top: 120px;">
+              <img src="images/portfolio/19.jpg" alt="르꼬끄 골프 이보미편">
               <div class="subject-bg">
                 <p>르꼬끄 골프 이보미편</p>
               </div>
             </div>
-            <div class="grid-item ad" data-date="20160802" data-youtube="https://www.youtube.com/watch?v=xNdCcmphxjE">
-              <img src="images/portfolio/16.jpg" alt="삼성 기어 VR 프로젝트 - Be Fearless">
+            <div class="grid-item ad" data-id="18" data-date="20160802" data-youtube="https://www.youtube.com/watch?v=xNdCcmphxjE">
+              <img src="images/portfolio/18.jpg" alt="삼성 기어 VR 프로젝트 - Be Fearless">
               <div class="subject-bg">
                 <p>삼성 기어 VR 프로젝트 - Be Fearless</p>
               </div>
             </div>
-            <div class="grid-item music" data-date="20160411" data-youtube="https://www.youtube.com/watch?v=izLMZeGC30A">
+            <div class="grid-item music" data-id="17" data-date="20160411" data-youtube="https://www.youtube.com/watch?v=izLMZeGC30A">
               <img src="images/portfolio/17.jpg" alt="유성은 - 질투(Duet.키썸) Music Video INTRO">
               <div class="subject-bg">
                 <p>유성은 - 질투(Duet.키썸) Music Video INTRO</p>
               </div>
             </div>
-            <div class="grid-item tvcf" data-date="20160331" data-youtube="https://www.youtube.com/watch?v=V0ZwH6MYc6Q">
-              <img src="images/portfolio/18.jpg" alt="삼성 갤럭시 S7 유연석, 이광수, 조윤우 편">
+            <div class="grid-item tvcf" data-id="16" data-date="20160331" data-youtube="https://www.youtube.com/watch?v=V0ZwH6MYc6Q">
+              <img src="images/portfolio/16.jpg" alt="삼성 갤럭시 S7 유연석, 이광수, 조윤우 편">
               <div class="subject-bg">
                 <p>삼성 갤럭시 S7 유연석, 이광수, 조윤우 편</p>
               </div>
             </div>
-            <div class="grid-item tvcf" data-date="20160331" data-youtube="https://www.youtube.com/watch?v=8Wn9bHn-wnw">
-              <img src="images/portfolio/19.jpg" alt="IBK기업은행 희망음악회 지하철편">
+            <div class="grid-item tvcf" data-id="15" data-date="20160331" data-youtube="https://www.youtube.com/watch?v=8Wn9bHn-wnw">
+              <img src="images/portfolio/15.jpg" alt="IBK기업은행 희망음악회 지하철편">
               <div class="subject-bg">
                 <p>IBK기업은행 희망음악회 지하철편</p>
               </div>
             </div>
-            <div class="grid-item tvcf" data-date="20160317" data-youtube="https://www.youtube.com/watch?v=Exh3MOaOu14">
-              <img src="images/portfolio/20.jpg" alt="[김느안느 뷰리텔] 토니모리 CF">
+            <div class="grid-item tvcf" data-id="14" data-date="20160317" data-youtube="https://www.youtube.com/watch?v=Exh3MOaOu14">
+              <img src="images/portfolio/14.jpg" alt="[김느안느 뷰리텔] 토니모리 CF">
               <div class="subject-bg">
                 <p>[김느안느 뷰리텔] 토니모리 CF</p>
               </div>
             </div>
-            <div class="grid-item tvcf" data-date="20160308" data-youtube="https://www.youtube.com/watch?v=ZSHcOIWZm7k">
-              <img src="images/portfolio/21.jpg" alt="쌍용자동차 티볼리 에어 TVCF">
+            <div class="grid-item tvcf" data-id="13" data-date="20160308" data-youtube="https://www.youtube.com/watch?v=ZSHcOIWZm7k">
+              <img src="images/portfolio/13.jpg" alt="쌍용자동차 티볼리 에어 TVCF">
               <div class="subject-bg">
                 <p>쌍용자동차 티볼리 에어 TVCF</p>
               </div>
             </div>
-            <div class="grid-item tvcf" data-date="20160307" data-youtube="https://www.youtube.com/watch?v=IlK_l92b2wI">
-              <img src="images/portfolio/22.jpg" alt="IBK기업은행 희망음악회 시장편">
+            <div class="grid-item tvcf" data-id="12" data-date="20160307" data-youtube="https://www.youtube.com/watch?v=IlK_l92b2wI">
+              <img src="images/portfolio/12.jpg" alt="IBK기업은행 희망음악회 시장편">
               <div class="subject-bg">
                 <p>IBK기업은행 희망음악회 시장편</p>
               </div>
             </div>
-            <div class="grid-item tvcf" data-date="20160216" data-youtube="https://www.youtube.com/watch?v=RWMpdlGRXcA">
-              <img src="images/portfolio/23.jpg" alt="[Pizza Hut] 피자헛 the맛있는피자2">
+            <div class="grid-item tvcf" data-id="11" data-date="20160216" data-youtube="https://www.youtube.com/watch?v=RWMpdlGRXcA">
+              <img src="images/portfolio/11.jpg" alt="[Pizza Hut] 피자헛 the맛있는피자2">
               <div class="subject-bg">
                 <p>[Pizza Hut] 피자헛 the맛있는피자2</p>
               </div>
             </div>
-            <div class="grid-item tvcf" data-date="20160207" data-youtube="https://www.youtube.com/watch?v=lGjDAbrs4uo">
-              <img src="images/portfolio/24.jpg" alt="질레트 코리아CF [류준열,이동휘 편]">
+            <div class="grid-item tvcf" data-id="10" data-date="20160207" data-youtube="https://www.youtube.com/watch?v=lGjDAbrs4uo">
+              <img src="images/portfolio/10.jpg" alt="질레트 코리아CF [류준열,이동휘 편]">
               <div class="subject-bg">
                 <p>질레트 코리아CF [류준열,이동휘 편]</p>
               </div>
             </div>
-            <div class="grid-item tvcf" data-date="20160201" data-youtube="https://www.youtube.com/watch?v=628_eqUL6GI">
-              <img src="images/portfolio/25.jpg" alt="정관장 황진단">
+            <div class="grid-item tvcf" data-id="9" data-date="20160201" data-youtube="https://www.youtube.com/watch?v=628_eqUL6GI">
+              <img src="images/portfolio/9.jpg" alt="정관장 황진단">
               <div class="subject-bg">
                 <p>정관장 황진단</p>
               </div>
             </div>
-            <div class="grid-item ad" data-date="20160112" data-youtube="https://www.youtube.com/watch?v=Y8lLR-LCLq4&t=2s">
-              <img src="images/portfolio/26.jpg" alt="[2015] 현대카드 컬처프로젝트 19 스탠리 큐브릭 전 – 360도 영상">
+            <div class="grid-item ad" data-id="8" data-date="20160112" data-youtube="https://www.youtube.com/watch?v=Y8lLR-LCLq4&amp;t=2s">
+              <img src="images/portfolio/8.jpg" alt="[2015] 현대카드 컬처프로젝트 19 스탠리 큐브릭 전 – 360도 영상">
               <div class="subject-bg">
                 <p>[2015] 현대카드 컬처프로젝트 19 스탠리 큐브릭 전 – 360도 영상</p>
               </div>
             </div>
-            <div class="grid-item ad" data-date="20160104" data-youtube="https://www.youtube.com/watch?v=ej_6d97FPBQ">
-              <img src="images/portfolio/27.jpg" alt="핫질, 당신의 심심함을 날려줄 HOT한 한방!">
+            <div class="grid-item ad" data-id="7" data-date="20160104" data-youtube="https://www.youtube.com/watch?v=ej_6d97FPBQ">
+              <img src="images/portfolio/7.jpg" alt="핫질, 당신의 심심함을 날려줄 HOT한 한방!">
               <div class="subject-bg">
                 <p>핫질, 당신의 심심함을 날려줄 HOT한 한방!</p>
               </div>
             </div>
-            <div class="grid-item ad" data-date="20160102" data-youtube="https://www.youtube.com/watch?v=saIfSjd344M">
-              <img src="images/portfolio/28.jpg" alt="삼성노트북 9 세일즈톡- 설민석 편">
+            <div class="grid-item ad" data-id="6" data-date="20160102" data-youtube="https://www.youtube.com/watch?v=saIfSjd344M">
+              <img src="images/portfolio/6.jpg" alt="삼성노트북 9 세일즈톡- 설민석 편">
               <div class="subject-bg">
                 <p>삼성노트북 9 세일즈톡- 설민석 편</p>
               </div>
             </div>
-            <div class="grid-item tvcf" data-date="20151022" data-youtube="https://www.youtube.com/watch?v=gqGAf2EaIBs">
-              <img src="images/portfolio/29.jpg" alt="[삼성전자 사회봉사단] 삼성 투모로우 솔루션, 시각 장애인 지우 이야기">
+            <div class="grid-item tvcf" data-id="5" data-date="20151022" data-youtube="https://www.youtube.com/watch?v=gqGAf2EaIBs">
+              <img src="images/portfolio/5.jpg" alt="[삼성전자 사회봉사단] 삼성 투모로우 솔루션, 시각 장애인 지우 이야기">
               <div class="subject-bg">
                 <p>[삼성전자 사회봉사단] 삼성 투모로우 솔루션, 시각 장애인 지우 이야기</p>
               </div>
             </div>
-            <div class="grid-item ad" data-date="20150911" data-youtube="https://www.youtube.com/watch?v=-s2Y-zy5HJE">
-              <img src="images/portfolio/30.jpg" alt="[팔도 왕뚜껑] 왕맛드립 하니 편">
+            <div class="grid-item ad" data-id="4" data-date="20150911" data-youtube="https://www.youtube.com/watch?v=-s2Y-zy5HJE">
+              <img src="images/portfolio/4.jpg" alt="[팔도 왕뚜껑] 왕맛드립 하니 편">
               <div class="subject-bg">
                 <p>[팔도 왕뚜껑] 왕맛드립 하니 편</p>
               </div>
             </div>
-            <div class="grid-item ad" data-date="20150831" data-youtube="https://www.youtube.com/watch?v=TVlpOm6PRoA">
-              <img src="images/portfolio/31.jpg" alt="[팔도 왕뚜껑] 왕맛드립 혁오 편">
+            <div class="grid-item ad" data-id="3" data-date="20150831" data-youtube="https://www.youtube.com/watch?v=TVlpOm6PRoA">
+              <img src="images/portfolio/3.jpg" alt="[팔도 왕뚜껑] 왕맛드립 혁오 편">
               <div class="subject-bg">
                 <p>[팔도 왕뚜껑] 왕맛드립 혁오 편</p>
               </div>
             </div>
-            <!-- <div class="grid-item concert" data-date="" data-youtube="https://www.youtube.com/watch?v=onnFk9U934c">
-              <img src="images/portfolio/32.jpg" alt="옴므 불후의 명곡 음원">
+            <div class="grid-item concert" data-id="2" data-date="" data-youtube="https://www.youtube.com/watch?v=onnFk9U934c">
+              <img src="images/portfolio/2.jpg" alt="옴므 불후의 명곡 음원">
               <div class="subject-bg">
                 <p>옴므 불후의 명곡 음원</p>
               </div>
             </div>
-            <div class="grid-item concert" data-date="" data-youtube="https://www.youtube.com/watch?v=Rdgvjs3887Q&t=11s">
-              <img src="images/portfolio/33.jpg" alt="옴므 불후의 명곡 음원2">
+            <div class="grid-item concert" data-id="1" data-date="" data-youtube="https://www.youtube.com/watch?v=Rdgvjs3887Q&amp;t=11s">
+              <img src="images/portfolio/1.jpg" alt="옴므 불후의 명곡 음원2">
               <div class="subject-bg">
                 <p>옴므 불후의 명곡 음원2</p>
               </div>
-            </div> -->
+            </div>
           </div>
         </section>
         <div class="layer-bg" id="layer" aria-hidden="true" role="dialog" aria-labelledby="dialogTitle">
@@ -284,118 +310,6 @@
       </footer>
     </div>
   </div>
-  <script src="javascripts/jquery.min.js"></script>
-  <script>
-    $(function () {
-      $('.menu-btn, .menu-close-btn, .menu-open-bg').on('click', function () {
-        $('.navigation').toggleClass('nav-act');
-        $('.menu-open-bg').toggleClass('menu-bg-act');
-      });
-    });
-  </script>
-  <script src="javascripts/isotope.pkgd.min.js"></script>
-  <script>
-    var grid = document.querySelector('.grid');
-    var iso = new Isotope(grid, {
-      itemSelector: '.grid-item',
-      percentPosition: true,
-      masonry: {
-        columnWidth: '.grid-sizer',
-        gutter: '.gutter-sizer'
-      }
-    });
-
-    // bind filter button click
-    var filtersElem = document.querySelector('.filters-button-group');
-    filtersElem.addEventListener('click', function (event) {
-      // only work with buttons
-      if (!matchesSelector(event.target, 'button')) {
-        return;
-      }
-      var filterValue = event.target.getAttribute('data-filter');
-      iso.arrange({ filter: filterValue });
-    });
-
-    // change is-checked class on buttons
-    var buttonGroups = document.querySelectorAll('.button-group');
-    for (var i = 0, len = buttonGroups.length; i < len; i++) {
-      var buttonGroup = buttonGroups[i];
-      radioButtonGroup(buttonGroup);
-    }
-
-    function radioButtonGroup(buttonGroup) {
-      buttonGroup.addEventListener('click', function (event) {
-        // only work with buttons
-        if (!matchesSelector(event.target, 'button')) {
-          return;
-        }
-        buttonGroup.querySelector('.is-checked').classList.remove('is-checked');
-        event.target.classList.add('is-checked');
-      });
-    }
-
-    function imgCheckDirections(img) {
-      var result = '';
-      var width = img.width();
-      var height = img.height();
-
-      console.log(width);
-      console.log(height);
-
-      if (width >= height) {
-        result = "cover";
-      } else if (height > width) {
-        result = "contain";
-      }
-
-      return result;
-    }
-
-    $(function () {
-
-      $(window).scroll(function () {
-        var scrollTop = $(this).scrollTop();
-        $('.grid-item').each(function () {
-          var aniStart = $(this).offset().top - 500;
-          if (aniStart <= scrollTop) {
-            $(this).addClass('scroll');
-          }
-        });
-      });
-      $('.button-group > button').click(function () {
-        $('.grid-item').each(function () {
-          if (!$(this).hasClass('scroll')) {
-            $(this).addClass('scroll');
-          }
-        });
-      });
-
-      $('.grid-item').click(function (e) {
-        $('.layer_area > .img').css({
-          'background-image': 'url("' + $(this).find('img').attr('src') + '")'
-        });
-        if ($(this).data('date')) {
-          $('.info-date > time').text($(this).data('date'));
-        } else {
-          $('.info-date > time').text(' ');
-        }
-        if ($(this).data('youtube')) {
-          $('.youtube-wrap').show();
-          $('.youtube-link').attr('href', $(this).data('youtube'));
-        } else {
-          $('.youtube-wrap').hide();
-        }
-        $('.info-title').text($(this).find('.subject-bg > p').text());
-        $('body').addClass('layer-show');
-        $('#layer').addClass('layer-show');
-      });
-      $('#layer-close').click(function (e) {
-        $('body').removeClass('layer-show');
-        $('#layer').removeClass('layer-show');
-      });
-
-    });
-  </script>
+  <script src="dist/app.js"></script>
 </body>
-
 </html>

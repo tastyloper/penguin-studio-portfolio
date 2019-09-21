@@ -1,0 +1,29 @@
+{
+  "name": "penguin-studio-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "dev": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tastyloper/penguin-studio-portfolio.git"
+  },
+  "author": "tastyloper",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tastyloper/penguin-studio-portfolio/issues"
+  },
+  "homepage": "https://github.com/tastyloper/penguin-studio-portfolio#readme",
+  "dependencies": {
+    "isotope-layout": "^3.0.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9"
+  }
+}
