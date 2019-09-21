@@ -14,11 +14,11 @@
   <link rel="stylesheet" media="screen and (min-width: 992px)" href="stylesheets/common/desktop-style.css">
   <link rel="stylesheet" media="screen and (min-width: 1200px)" href="stylesheets/common/large-desktop-style.css">
 </head>
-<body>
+<body class="loading-show loading">
   <div class="wrapper">
     <header class="header">
       <h1 class="logo">
-        <a href="#home" class="transition">
+        <a href="#home" class="smooth-link">
           <div class="img-wrap">
             <img src="images/common/logo.jpg" alt="penguin's studio" title="팽귄 스튜디오">
           </div>
@@ -30,10 +30,13 @@
         <h2 class="readable-hidden">메인메뉴</h2>
         <ul class="menu">
           <li class="active">
-            <a href="#home">home</a>
+            <a href="#home" class="smooth-link">home</a>
           </li>
           <li class="">
-            <a href="#portfolio">portfolio</a>
+            <a href="#portfolio" class="smooth-link">portfolio</a>
+          </li>
+          <li class="">
+            <a href="#contect" class="smooth-link">contect</a>
           </li>
         </ul>
         <a href="javascript:void(0);" class="menu-close-btn icon-cancel"></a>
@@ -41,17 +44,45 @@
       <div class="menu-open-bg"></div>
     </header>
     <div class="contents-wrap">
+      <div class="loading-wrap">
+        <div class="loading-center">
+          <div class="loader" title="loading">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+              <rect x="0" y="10" width="4" height="10" fill="#333" opacity="0.2">
+                <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0s" dur="0.6s" repeatCount="indefinite" />
+                <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0s" dur="0.6s" repeatCount="indefinite" />
+                <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0s" dur="0.6s" repeatCount="indefinite" />
+              </rect>
+              <rect x="8" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+                <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+              </rect>
+              <rect x="16" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+                <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+              </rect>
+            </svg>
+          </div>
+          <p>loading...</p>
+        </div>
+      </div>
+      <div class="gotop-icon" style="display: none;">
+        <i class="fa fa-chevron-up"></i>
+      </div>
       <div class="contents">
         <section id="home" class="section-wrap home-wrap">
           <div class="home-logo-wrap">
             <img src="images/common/logo.jpg" alt="penguin's studio" title="팽귄 스튜디오">
             <h3 class="section-title home-title">penguin's studio</h3>
             <div class="btn-wrap">
-              <a href="#portfolio" class="btn main-btn">portfolio</a>
-              <a href="#" class="btn default-btn">contect</a>
+              <a href="#portfolio" class="smooth-link btn main-btn">portfolio</a>
+              <a href="#contect" class="smooth-link btn default-btn">contect</a>
             </div>
           </div>
-          <a class="scroll-icon" href="#portfolio"><i class="fa fa-angle-double-down"></i></a>
+          <div class="scroll-icon"><i class="fa fa-angle-double-down"></i></div>
           <!-- <div class="glide">
             <div class="glide__track" data-glide-el="track">
               <ul class="glide__slides">
@@ -287,6 +318,13 @@
             </div>
           </div>
         </section>
+        <section id="contect" class="section-wrap contect-wrap">
+          <h3 class="section-title">contect</h3>
+          <div class="contect-mail-wrap">
+            <a href="mailTo:darkpgw@gmail.com" class="contect-mail">darkpgw@gmail.com</a>
+          </div>
+          <p class="contect-explan">Let’s make something with love, that’s not a 👶🏻.</p>
+        </section>
         <div class="layer-bg" id="layer" aria-hidden="true" role="dialog" aria-labelledby="dialogTitle">
           <div class="layer_area">
             <div class="img"></div>
@@ -306,7 +344,7 @@
         </div>
       </div>
       <footer class="footer">
-        <small class="copyright">ⓒ 2019. <a href="/contactus/login">penguin</a>'s studio. all rights reserved</small>
+        <small class="copyright">ⓒ 2019. <a href="#">penguin</a>'s studio. all rights reserved</small>
       </footer>
     </div>
   </div>

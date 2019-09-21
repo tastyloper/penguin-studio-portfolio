@@ -1,8 +1,6 @@
 @charset "utf-8";
 @import url("./fontello.css");
 @import url("./normalize.css");
-@import url("/node_modules/@glidejs/glide/dist/css/glide.core.min.css");
-@import url("/node_modules/@glidejs/glide/dist/css/glide.theme.min.css");
 
 @font-face {
   font-family: 'noto-sans-scott';
@@ -230,10 +228,98 @@ body .readable-hidden {
 }
 
 /****************************
+ * Go Top Icon
+*****************************/
+.gotop-icon {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  z-index: 1009;
+  width: 50px;
+  height: 50px;
+  color: #FFF;
+  font-size: 15px;
+  background-color: #E06035;
+  border-radius: 50%;
+  box-shadow: 0 5px 10px rgba(0,0,0,.5);
+  cursor: pointer;
+}
+.gotop-icon i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+@media all and (min-width: 768px) {
+  .gotop-icon {
+    right: 50px;
+    bottom: 50px;
+    width: 70px;
+    height: 70px;
+    font-size: 20px;
+  }
+}
+
+/****************************
+ * loading
+*****************************/
+.loading-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -100;
+  opacity: 0;
+  background-color: #000;
+  transition: all .5s ease-in-out;
+}
+.loading-show .loading-wrap {
+  z-index: 1999;
+}
+.loading .loading-wrap {
+  opacity: 1;
+}
+.loading-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.loader {
+  display: inline-block;
+  width: 100px;
+  margin: 0 auto 20px;
+  padding: 10px;
+  text-align: center;
+  vertical-align: top;
+}
+svg path,
+svg rect{
+  fill: #E06035;
+}
+.loading-wrap p {
+  color: #FFF;
+  font-family: "Didact Gothic", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+}
+
+/****************************
  * Section Common
 *****************************/
 .section-wrap {
-  padding: 50px 15px 100px;
+  padding: 80px 15px 30px;
+  background-color: #FFF;
 }
 .section-title {
   position: relative;
@@ -241,7 +327,6 @@ body .readable-hidden {
   font-family: "Didact Gothic", sans-serif;
   font-size: 30px;
   font-weight: 600;
-  text-shadow: rgba(0,0,0,.1) 0 17px 20px;
 }
 .section-title::before {
   content: "";
@@ -264,8 +349,8 @@ body .readable-hidden {
 *****************************/
 .home-wrap {
   position: relative;
-  height: calc(100vh - 50px);
-  padding: 0;
+  height: 100vh;
+  padding-top: 50px;
 }
 .home-logo-wrap {
   position: absolute;
@@ -311,7 +396,6 @@ body .readable-hidden {
   transform: translateX(-50%);
   font-size: 36px;
   color: #121212;
-  cursor: pointer;
   opacity: 1;
   animation: glow 4s infinite;
 }
@@ -606,5 +690,103 @@ body.layer-show {
 @media all and (min-width: 1600px) {
   .grid-item .subject-bg p {
     font-size: 35px;
+  }
+}
+
+/****************************
+ * contect
+*****************************/
+.contect-wrap .contect-mail-wrap {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.contect-wrap .contect-mail {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 20px;
+  font-size: 30px;
+  line-height: 1.04;
+  letter-spacing: -2px;
+  text-align: center;
+  font-weight: bold;
+  color: #101010;
+  outline: 0;
+}
+.contect-wrap .contect-mail:after {
+  content: "";
+  width: 100%;
+  height: 5px;
+  display: block;
+  position: absolute;
+  background-color: #050505;
+  bottom: 4px;
+  left: 0;
+  transition: -webkit-transform 0.6s cubic-bezier(0.475, 0.425, 0, 0.995);
+  transition: -moz-transform 0.6s cubic-bezier(0.475, 0.425, 0, 0.995);
+  transition: -o-transform 0.6s cubic-bezier(0.475, 0.425, 0, 0.995);
+  transition: -ms-transform 0.6s cubic-bezier(0.475, 0.425, 0, 0.995);
+  transition: transform 0.6s cubic-bezier(0.475, 0.425, 0, 0.995);
+  transform: -webkit-scaleX(0);
+  transform: -moz-scaleX(0);
+  transform: -o-scaleX(0);
+  transform: -ms-scaleX(0);
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+.contect-wrap .contect-mail:hover:after {
+  transform-origin: left center;
+  transition: -webkit-transform 0.6s cubic-bezier(0.475, 0.425, 0, 0.995);
+  transition: -moz-transform 0.6s cubic-bezier(0.475, 0.425, 0, 0.995);
+  transition: -o-transform 0.6s cubic-bezier(0.475, 0.425, 0, 0.995);
+  transition: -ms-transform 0.6s cubic-bezier(0.475, 0.425, 0, 0.995);
+  transition: transform 0.6s cubic-bezier(0.475, 0.425, 0, 0.995);
+  transform: -webkit-scaleX(1);
+  transform: -moz-scaleX(1);
+  transform: -o-scaleX(1);
+  transform: -ms-scaleX(1);
+  transform: scaleX(1);
+}
+.contect-wrap .contect-explan {
+  font-size: 18px;
+  color: #101010;
+  text-align: center;
+}
+@media all and (min-width: 600px) {
+  .contect-wrap .contect-mail-wrap {
+    margin-top: 80px;
+  }
+  .contect-wrap .contect-mail {
+    padding-bottom: 20px;
+    font-size: 52px;
+    letter-spacing: -5.4px;
+  }
+  .contect-wrap .contect-explan {
+    font-size: 18px;
+  }
+}
+@media all and (min-width: 992px) {
+  .contect-wrap .contect-mail {
+    font-size: 70px;  
+  }
+  .contect-wrap .contect-explan {
+    font-size: 20px;
+  }
+}
+@media all and (min-width: 1200px) {
+  .contect-wrap .contect-mail {
+    padding-bottom: 30px;
+    font-size: 80px;
+  }
+  .contect-wrap .contect-explan {
+    font-size: 25px;
+  }
+}
+@media all and (min-width: 1400px) {
+  .contect-wrap .contect-mail {
+    font-size: 100px;
+  }
+  .contect-wrap .contect-explan {
+    font-size: 30px;
   }
 }

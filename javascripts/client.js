@@ -24,6 +24,7 @@ class Penguin {
     this.$menuBtn.addEventListener('click', this.menuEvent.bind(this));
     this.$menuCloseBtn.addEventListener('click', this.menuEvent.bind(this));
     this.$menuOpenBg.addEventListener('click', this.menuEvent.bind(this));
+    this.$navigation.addEventListener('click', this.menuEvent.bind(this));
     this.$grid.addEventListener('click', this.detailEvent.bind(this));
     this.$layerClose.addEventListener('click', this.layerCloseEvent.bind(this));
   }
@@ -359,9 +360,7 @@ new Penguin(portfolios);
 function radioButtonGroup(buttonGroup) {
   buttonGroup.addEventListener('click', function (event) {
     // only work with buttons
-    if (!matchesSelector(event.target, 'button')) {
-      return;
-    }
+    if (!event.target.matches('button')) return;
     buttonGroup.querySelector('.is-checked').classList.remove('is-checked');
     event.target.classList.add('is-checked');
   });
@@ -386,6 +385,63 @@ function imgCheckDirections(img) {
 
 window.onload = function() {
 
+  const $body = document.querySelector('body');
+
+  setTimeout(() => {
+    $body.classList.remove('loading');
+    $body.classList.remove('loading-show');
+  }, 1000);
+
+  const $goTopIcon = document.querySelector('.gotop-icon');
+  const $smoothLinks = document.querySelectorAll('.smooth-link');
+
+  window.addEventListener('scroll', (e) => {
+    const windowYOffset = window.pageYOffset;
+    $goTopIcon.style.display = windowYOffset > 100 ? 'block' : 'none';
+  });
+
+  $goTopIcon.addEventListener('click', () => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  });
+
+  for (let i = 0; i < $smoothLinks.length; i++) {
+    $smoothLinks[i].addEventListener('click', (e) => {
+      e.preventDefault();
+      if (e.target.tagName !== 'A') return;
+      const targetName = e.target.getAttribute('href').split('#')[1];
+      const tartget = document.getElementById(targetName);
+      window.scroll({
+        top: tartget.offsetTop,
+        left: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
+  const $navItems = document.querySelectorAll('.menu > li');
+  const $sections = document.querySelectorAll('.section-wrap');
+
+  function changeNavItemState() {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+      $navItems.forEach((link) => link.classList.remove('active'));
+      $navItems[$navItems.length - 1].classList.add('active');
+    } else {
+      let index = $sections.length;
+      
+      while(--index && window.scrollY + 50 < $sections[index].offsetTop) {}
+      
+      $navItems.forEach((link) => link.classList.remove('active'));
+      $navItems[index].classList.add('active');
+    }
+  }
+
+  changeNavItemState();
+  window.addEventListener('scroll', changeNavItemState);
+
   // new Glide('.glide', {
   //   type: 'carousel',
   //   startAt: 0,
@@ -407,9 +463,7 @@ window.onload = function() {
   const $filtersElem = document.querySelector('.filters-button-group');
   $filtersElem.addEventListener('click', function (event) {
     // only work with buttons
-    if (!matchesSelector(event.target, 'button')) {
-      return;
-    }
+    if (!event.target.matches('button')) return;
     const filterValue = event.target.getAttribute('data-filter');
     iso.arrange({ filter: filterValue });
   });
