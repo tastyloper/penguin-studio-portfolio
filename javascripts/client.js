@@ -1,5 +1,5 @@
 import Isotope from 'isotope-layout';
-// import Glide from '@glidejs/glide';
+import smoothscroll from 'smoothscroll-polyfill';
 
 class Penguin {
   constructor (portfolios) {
@@ -384,6 +384,8 @@ function imgCheckDirections(img) {
 }
 
 window.onload = function() {
+
+  smoothscroll.polyfill();
 
   const $body = document.querySelector('body');
 

@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/tastyloper/penguin-studio-portfolio#readme",
   "dependencies": {
-    "isotope-layout": "^3.0.6"
+    "isotope-layout": "^3.0.6",
+    "smoothscroll-polyfill": "^0.4.4"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
